@@ -27,7 +27,7 @@ def _create_directory_service(user_email='', service_account_email='', service_a
 
 
 class GSuiteAdmin:
-    """This class defines all operations
+    """This class defines all operations.
 
     Attributes:
         group_management_email: User with group management privileges
@@ -52,7 +52,7 @@ class GSuiteAdmin:
         """Lists all members of a given group.
 
         Args:
-            groupKey: The group key to list all members.
+            groupKey: The group key to list all members. The value can be the group's email address, group alias, or the unique group ID.
 
         Returns:
             The list of membes in the group key. Members fields: id, email, type and role.
@@ -71,7 +71,7 @@ class GSuiteAdmin:
         return result
 
     def list_groups(self, query, domain):
-        """Lists all group from a given domain and query
+        """Lists all group from a given domain and query.
 
         Args:
             query: The query to filter groups.
@@ -90,3 +90,39 @@ class GSuiteAdmin:
             request = self.groups.list_next(previous_request=request, previous_response=response)
 
         return result
+
+    def add_member_to_group(self, member, groupKey):
+        """Add a member to a group.
+        
+        You can inform a member just pasing the e-mail as string ("role = MEMBER" by default) or
+        an object with all the properties. Example:
+
+            {
+                'kind': "admin#directory#member",
+                'role': "MANAGER / MEMBER / OWNER",
+                'type': "CUSTOMER / EXTERNAL / GROUP / USER",
+                'email': "foo@bar.com"
+            }
+
+
+        Args:
+            member: Member to add in the group.
+            groupKey: The group key to add the member. The value can be the group's email address, group alias, or the unique group ID.
+
+        """
+        log.info('Adding member {} to group {}'.format(member, groupKey))
+        if isinstance(member, dict):
+            body = {
+                'kind': "admin#directory#member",
+                'role': member['role'],
+                'type': member['type'],
+                'email': member['email']
+            }
+        else:
+            body = {
+                'kind': "admin#directory#member",
+                'role': 'MEMBER',
+                'email': member
+            }
+        req = self.members.insert(body=body, groupKey=groupKey)
+        response = req.execute()

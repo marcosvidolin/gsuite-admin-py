@@ -104,7 +104,6 @@ class GSuiteAdmin:
                 'email': "foo@bar.com"
             }
 
-
         Args:
             member: Member to add in the group.
             groupKey: The group key to add the member. The value can be the group's email address, group alias, or the unique group ID.
@@ -125,4 +124,16 @@ class GSuiteAdmin:
                 'email': member
             }
         req = self.members.insert(body=body, groupKey=groupKey)
+        response = req.execute()
+
+    def remove_member_from_group(self, memberKey, groupKey):
+        """Removes a member from a group.
+
+        Args:
+            memberKey: Member to be removed. A group member can be a user or another group. The value can be the member's (group or user) primary email address, alias, or unique ID.
+            groupKey: The group key. The value can be the group's email address, group alias, or the unique group ID.
+
+        """
+        log.info('Removing member {} from group {}'.format(memberKey, groupKey))
+        req = self.members.delete(memberKey=memberKey, groupKey=groupKey)
         response = req.execute()

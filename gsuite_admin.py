@@ -69,3 +69,24 @@ class GSuiteAdmin:
 
         log.info('Got {} member(s)'.format(len(result)))
         return result
+
+    def list_groups(self, query, domain):
+        """Lists all group from a given domain and query
+
+        Args:
+            query: The query to filter groups.
+            domain: The GSuite domain.
+
+        Returns:
+            The list of groups in the domain.
+
+        """
+        request = self.groups.list(query=query, domain=domain)
+
+        result = []
+        while request is not None:
+            response = request.execute()
+            result.extend(response.get('groups', []))
+            request = self.groups.list_next(previous_request=request, previous_response=response)
+
+        return result

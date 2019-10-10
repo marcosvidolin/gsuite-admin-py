@@ -2,7 +2,7 @@
 
 Gsuite Admin client to manage users and groups
 
-## To install the package
+## How to use
 
 ```shell
 pip install gsuitefy-admin

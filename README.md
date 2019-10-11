@@ -1,8 +1,6 @@
 # gsuite-admin-py
 
-[![Build Status](https://travis-ci.org/marcosvidolin/gsuitefy-admin.svg?branch=master)](https://travis-ci.org/marcosvidolin/gsuitefy-admin)
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/57594179c5f84ce8b30b930fcd6b5646)](https://www.codacy.com/manual/marcosvidolin/gsuitefy-admin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcosvidolin/gsuitefy-admin&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/marcosvidolin/gsuitefy-admin.svg?branch=master)](https://travis-ci.org/marcosvidolin/gsuitefy-admin) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/57594179c5f84ce8b30b930fcd6b5646)](https://www.codacy.com/manual/marcosvidolin/gsuitefy-admin?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcosvidolin/gsuitefy-admin&amp;utm_campaign=Badge_Grade)
 
 Gsuite Admin client to manage users and groups
 

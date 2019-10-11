@@ -6,8 +6,36 @@ Gsuite Admin client to manage users and groups
 
 ## How to use
 
+Install:
+
 ```shell
 pip install gsuitefy
+```
+
+Import:
+
+```python
+from gsuitefy.gsuite import GSuiteAdmin
+```
+
+Sample:
+```python
+# User with gsuite manager rights
+MANAGER_USER_MAIL = 'group-manager@bar.com'
+# The scopes
+SCOPES = ['https://www.googleapis.com/auth/admin.directory.group'
+        , 'https://www.googleapis.com/auth/admin.directory.group.member']
+# Email of the Service Account
+SERVICE_ACCOUNT_EMAIL = 'sa@bar.iam.gserviceaccount.com'
+# Path to the service account JSON file
+SERVICE_ACCOUNT_FILE_PATH = os.path.join(os.path.dirname(__file__), 'service-account.json')
+
+gsuite = GSuiteAdmin(group_management_email=MANAGER_USER_MAIL,
+    service_account=SERVICE_ACCOUNT_FILE_PATH,
+    service_account_email=SERVICE_ACCOUNT_EMAIL,
+    scopes=SCOPES)
+
+gsuite.add_member_to_group(member='foo@bar.com', groupKey='foo-group@bar.com')
 ```
 
 ## Development

@@ -1,6 +1,4 @@
-import os
 import logging
-import json
 
 from googleapiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
@@ -124,7 +122,7 @@ class GSuiteAdmin:
                 'email': member
             }
         req = self.members.insert(body=body, groupKey=groupKey)
-        response = req.execute()
+        return req.execute()
 
     def remove_member_from_group(self, memberKey, groupKey):
         """Removes a member from a group.
@@ -136,4 +134,4 @@ class GSuiteAdmin:
         """
         log.info('Removing member {} from group {}'.format(memberKey, groupKey))
         req = self.members.delete(memberKey=memberKey, groupKey=groupKey)
-        response = req.execute()
+        return req.execute()

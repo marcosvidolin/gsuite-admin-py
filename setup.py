@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
 from glob import glob
 
 from setuptools import find_packages
@@ -10,9 +9,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     name='gsuitefy-admin',  
+     name='gsuitefy-admin',
      version='1.0.0',
-     scripts=['gsuitefy-admin'] ,
+     scripts=['gsuitefy-admin'],
      author="Marcos Alexandre Vidolin de Lima",
      author_email="marcosvidolin@gmail.com",
      description="Gsuite Admin client to manage users and groups",

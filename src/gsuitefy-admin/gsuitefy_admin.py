@@ -91,7 +91,6 @@ class GSuiteAdmin:
 
     def add_member_to_group(self, member, groupKey):
         """Add a member to a group.
-        
         You can inform a member just pasing the e-mail as string ("role = MEMBER" by default) or
         an object with all the properties. Example:
 

@@ -29,7 +29,7 @@ python setup.py bdist_wheel
 ## Install on Your Local Machine (to test)
 
 ```shell
-python -m pip install dist/gsuitefy_admin-0.1-py2-none-any.whl
+python -m pip install dist/gsuitefy_admin-1.0.0-py2-none-any.whl
 ```
 
 ## Upload on pip

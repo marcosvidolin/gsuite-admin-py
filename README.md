@@ -1,6 +1,6 @@
 # gsuite
 
-[![Build Status](https://travis-ci.org/marcosvidolin/gsuitefy.svg?branch=master)](https://travis-ci.org/marcosvidolin/gsuitefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/57594179c5f84ce8b30b930fcd6b5646)](https://www.codacy.com/manual/marcosvidolin/gsuitefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcosvidolin/gsuitefy&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/marcosvidolin/gsuitefy.svg?branch=master)](https://travis-ci.org/marcosvidolin/gsuitefy) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ff1fcd33e0c0461f8aac31250b64b9ac)](https://www.codacy.com/manual/marcosvidolin/gsuitefy?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=marcosvidolin/gsuitefy&amp;utm_campaign=Badge_Grade)
 
 Gsuite Admin client to manage users and groups
 

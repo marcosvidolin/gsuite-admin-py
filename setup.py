@@ -16,15 +16,15 @@ install_requires = [
 with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
-     name='gsuitefy_admin',
-     version='1.0.2',
-     scripts=['gsuitefy-admin'],
+     name='gsuitefy',
+     version='1.0.3',
+     scripts=['gsuitefy'],
      author="Marcos Alexandre Vidolin de Lima",
      author_email="marcosvidolin@gmail.com",
      description="Gsuite Admin client to manage users and groups",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     url="https://github.com/marcosvidolin/gsuitefy-admin",
+     url="https://github.com/marcosvidolin/gsuitefy",
      install_requires=install_requires,
      packages=find_packages('src'),
      package_dir={'': 'src'},

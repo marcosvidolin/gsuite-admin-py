@@ -17,7 +17,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
      name='gsuitefy',
-     version='1.0.3',
+     version='1.1.1',
      scripts=['gsuitefy'],
      author="Marcos Alexandre Vidolin de Lima",
      author_email="marcosvidolin@gmail.com",

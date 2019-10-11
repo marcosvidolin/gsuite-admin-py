@@ -5,6 +5,9 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 log = logging.getLogger(__name__)
 
+DEFAULT_SCOPES = ['https://www.googleapis.com/auth/admin.directory.group'
+        , 'https://www.googleapis.com/auth/admin.directory.group.member']
+
 def _create_directory_service(user_email='', service_account_email='', service_account='', scopes=[]):
     """Build and returns an Admin SDK Directory service object authorized with the service accounts
     that act on behalf of the given user.
@@ -37,7 +40,7 @@ class GSuiteAdmin:
         https://developers.google.com/resources/api-libraries/documentation/admin/directory_v1/python/latest/index.html
 
     """
-    def __init__(self, group_management_email='', service_account_email='', service_account='', scopes=[]):
+    def __init__(self, group_management_email='', service_account_email='', service_account='', scopes=DEFAULT_SCOPES):
         self.client = _create_directory_service(user_email=group_management_email,
                                                 service_account_email=service_account_email,
                                                 service_account=service_account,

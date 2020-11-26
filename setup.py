@@ -7,7 +7,7 @@ from setuptools import find_packages
 import setuptools
 
 install_requires = [
-    'google-api-python-client==1.7.11',
+    'google-api-python-client==1.12.8',
     'google-auth-httplib2==0.0.3',
     'google-auth-oauthlib==0.4.1',
     'oauth2client==4.1.3'
